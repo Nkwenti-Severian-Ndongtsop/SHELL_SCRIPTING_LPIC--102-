@@ -41,7 +41,7 @@ The next thing are start-up scripts;\
 **/etc/profile :** this script runs to set-up all environment variables such as PS1.
 When log-in into a user the `.profile` and `/etc/profile` runs.\
 **~/.bash_profile:** it is used to configure the users environment.\
-it also runs both `~/.bash_login`, `~/.profile`.
+it also runs both `~/.bash_login`, `~/.profile`.\
 **~/.bash_login:** it is used when you want to log-in.\
 **~/.profile:** this is a check file. the script in it checks if a shell is running, if so, it's run the `~/.bashrc`.\
 **~/.bash_logout:** this runs when you want to log-out. It ensures the clean-up of all operations. 
