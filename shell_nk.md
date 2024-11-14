@@ -6,7 +6,7 @@
    - maintain skeleton directories for new users account
    - set command search path with the proper directory
 
-The shell is the most powerful tool in a linux system and provides an interface for managing the linux operating.\
+The shell is the most powerful tool in a linux system and provides an interface for managing the linux operating.
 It takes input from the user as commands and gives output on the terminal.\
 
 Starting with shells we have **Interractive/Non-interactive shells** and **Login/Non-Login Shells**\
