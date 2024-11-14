@@ -5,7 +5,8 @@
     There are many interpreters for the Script but the default one is after the '#!' at the first line
     known as shebang like /bin/bash
 
-    All lines with "#" are considered as ignored 
+    All lines with "#" are considered as ignored after the shebang
+
 
     To manipulate files, we must make sure the users groups or others have proper permissions
     We use the command 'chmod ugo -=+ rwx'
