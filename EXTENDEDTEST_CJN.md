@@ -56,6 +56,7 @@ Evaluate if TXT1 comes before TXT2, in alphabetical order.
 Evaluate if TXT1 comes after TXT2, in alphabetical order.
 
 # THE CASE STATEMENT
+In shell scripting, a case statement (also known as a switch statement) is a control flow construct that allows you to execute different blocks of code based on the value of an expression.  
 ```SH
 #!/bin/bash
 
