@@ -138,4 +138,6 @@
      #!/bin/bash
     OS=$(uname -o)
     echo -e "Operating system:\t$OS"
+    Operating system:	GNU/Linux
+
 ```
