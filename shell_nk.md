@@ -7,7 +7,7 @@
    - set command search path with the proper directory
 
 The shell is the most powerful tool in a linux system and provides an interface for managing the linux operating.
-It takes input from the user as commands and gives output on the terminal.\
+It takes input from the user as commands and gives output on the terminal.
 
 Starting with shells we have **Interractive/Non-interactive shells** and **Login/Non-Login Shells**\
 **Log-in shells:** is the initial shell that starts when a user logs in to the system, through the terminal or SSH connection.
@@ -19,7 +19,7 @@ The command to check wether you are on a log-in shell or a non log-in shell is
 echo $0
 ```
 **Interactive shells:** these are shells that respond accordingly to commands inputted by the user.\
-**Non-interactive shell:** these shells does not allow the user to input commands and returns  no output to the user.\ 
+**Non-interactive shell:** these shells does not allow the user to input commands and returns  no output to the user.
 e.g the screen command
 ```bash
 screen
