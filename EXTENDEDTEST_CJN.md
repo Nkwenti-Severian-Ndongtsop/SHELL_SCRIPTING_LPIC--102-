@@ -7,7 +7,7 @@ else
   echo "File does not exist."
 fi
 ```
-## SOME SPECIAL ARGUMENTS
+## SOME SPECIAL VARIABLES 
 * -a "$VAR"
     Evaluate if the path in VAR exists in the filesystem and it is a file.
 * -b "$VAR"
@@ -24,7 +24,7 @@ fi
   Evaluate if the path in VAR has the SGID permission.
 * -h "$VAR"
   Evaluate if the path in VAR is a symbolic link.
-  #  SOME NUMERICAL ARGUMENTS
+  #  SOME NUMERICAL VARIABLES 
 *  $NUM1 -lt $NUM2
 Evaluate if NUM1 is less than NUM2.
 * $NUM1 -gt $NUM2
