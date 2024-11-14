@@ -97,7 +97,7 @@ echo "Welcome, Mr Francis."
 }
 echo "Are you the founder of Adorsys[y/n]"
 read respond
-if [[ "$respond" -eq "y" ]]; then
+if [[ "$respond" == "y" ]]; then
 display
 else
 echo Thank you!
