@@ -41,13 +41,14 @@ until [ "$count" -eq 5 ]; do
 done
 
 echo "Loop ended because count is: $count"
+```
 
 In this example:
 
 The until loop runs as long as count is not equal to 5.
 
 When count reaches 5, the loop stops, and the final value of count is printed.
-```
+
 3: THE WHILE LOOP
 + The while loop in Bash scripting is a fundamental construct that allows you to execute a block of commands repeatedly as long as a specified condition evaluates to true. It is particularly useful when the number of iterations is not known beforehand and depends on the condition being checked[1], [2].
 ```SH
