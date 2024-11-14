@@ -30,26 +30,23 @@ done
 ```
  2: THE UNTIL LOOP
  An until loop in Bash scripting is used to repeatedly execute a block of code until a specified condition becomes true. It operates in the opposite manner of a while loop: the until loop continues running as long as the condition evaluates to false and stops when the condition evaluates to true[1], [2].
+ Here's a simple example:
 
 ```sh
- #!/bin/bash
-SEQ=( 1 1 2 3 5 8 13 )
-IDX=0
-until [ $IDX -eq ${#SEQ[*]} ]
-do
-    echo -n "${SEQ[$IDX]} is "
-    if [ $(( ${SEQ[$IDX]} % 2 )) -ne 0 ]
-    then
-        echo "odd."
-    else
-        echo "even."
-    fi    SEQ=( 1 1 2 3 5 8 13 ): Initializes an array SEQ with a sequence of numbers.
-    IDX=0: Sets the starting index to 0.
-    until [ $IDX -eq ${#SEQ[*]} ]: Loops until IDX reaches the length of SEQ.
-    echo -n "${SEQ[$IDX]} is ": Prints the current number without a newline.
-    if 
-    IDX=$(( $IDX + 1 ))
+count=0
+
+until [ "$count" -eq 5 ]; do
+  echo "Count is: $count"
+  count=$((count + 1))
 done
+
+echo "Loop ended because count is: $count"
+
+In this example:
+
+The until loop runs as long as count is not equal to 5.
+
+When count reaches 5, the loop stops, and the final value of count is printed.
 ```
 3: THE WHILE LOOP
 + The while loop in Bash scripting is a fundamental construct that allows you to execute a block of commands repeatedly as long as a specified condition evaluates to true. It is particularly useful when the number of iterations is not known beforehand and depends on the condition being checked[1], [2].
