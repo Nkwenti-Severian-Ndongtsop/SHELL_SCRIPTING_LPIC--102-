@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://github.com/Nkwenti-Severian-Ndongtsop/SHELL_SCRIPTING_LPIC--102-.git/LOOPCONTRUCTS_CJN/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>LOOP CONTRUCT - SHELL_SCRIPTING</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "LOOP CONTRUCT";
+        var mkdocs_page_input_path = "LOOPCONTRUCTS_CJN.md";
+        var mkdocs_page_url = "/Nkwenti-Severian-Ndongtsop/SHELL_SCRIPTING_LPIC--102-.git/LOOPCONTRUCTS_CJN/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> SHELL_SCRIPTING
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../shell_nk/">SHELL</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="../Aliases-and-funtion_nk.md">ALIASES</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../VARIABLE_nk/">VARIABLE</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../assignment/">SHELL STRUCTURE</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../EXTENDEDTEST_CJN/">EXTENDED TEST</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">LOOP CONTRUCT</a>
+    <ul class="current">
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../EXAMPLES_CJN/">EXAMPLES</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">SHELL_SCRIPTING</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">LOOP CONTRUCT</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/Nkwenti-Severian-Ndongtsop/SHELL_SCRIPTING_LPIC--102-.git/edit/master/docs/chojuninengu/LOOPCONTRUCTS_CJN.md">Edit on SHELL_SCRIPTING_LPIC--102-</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p>## LOOP CONSTRUCTS
+Scripts are often used as a tool to automate repetitive tasks, performing the same set of commands
+until a stop criteria is verified. Bash has three loop instructions — for, until and
+while — designed for slightly distinct loop constructions.
+  # TYPES OF LOOPS
+        There are generally 3 loops
+ 1:  THE FOR LOOP 
+   This for works through a given list of items (eg .words,or any other space-separated text segments just to name a few)
+   Before each iteration,the <em>for</em> instruction assigns the current item to a variable,which can the be used by the enclosed commands
+   It is done until a no item is left 
+ ```sh
+ for VARNAME in LIST
+do
+COMMANDS
+done</p>
+<div class="codehilite"><pre><span></span><code><span class="k">FOR</span><span class="w"> </span><span class="nv">EXAMPLE</span>
+```<span class="nv">sh</span>
+#<span class="o">!/</span><span class="nv">bin</span><span class="o">/</span><span class="nv">bash</span>
+<span class="k">for</span><span class="w"> </span><span class="nv">NUM</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="mi">13</span>
+<span class="k">do</span>
+<span class="nv">echo</span><span class="w"> </span><span class="o">-</span><span class="nv">n</span><span class="w"> </span><span class="s2">&quot;$NUM is &quot;</span>
+<span class="k">if</span><span class="w"> </span>[<span class="w"> </span>$<span class="ss">((</span><span class="w"> </span>$<span class="nv">NUM</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="ss">))</span><span class="w"> </span><span class="o">-</span><span class="nv">ne</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span>]
+<span class="k">then</span>
+<span class="nv">echo</span><span class="w"> </span><span class="s2">&quot;odd.&quot;</span>
+<span class="k">else</span>
+<span class="nv">echo</span><span class="w"> </span><span class="s2">&quot;even.&quot;</span>
+<span class="nv">fi</span>
+<span class="nv">done</span>
+</code></pre></div>
+
+<p>2: THE UNTIL LOOP
+ An until loop in Bash scripting is used to repeatedly execute a block of code until a specified condition becomes true. It operates in the opposite manner of a while loop: the until loop continues running as long as the condition evaluates to false and stops when the condition evaluates to true[1], [2].
+ Here's a simple example:</p>
+<div class="codehilite"><pre><span></span><code><span class="nv">count</span><span class="o">=</span><span class="m">0</span>
+
+<span class="k">until</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$count</span><span class="s2">&quot;</span><span class="w"> </span>-eq<span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Count is: </span><span class="nv">$count</span><span class="s2">&quot;</span>
+<span class="w">  </span><span class="nv">count</span><span class="o">=</span><span class="k">$((</span><span class="nv">count</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="k">))</span>
+<span class="k">done</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Loop ended because count is: </span><span class="nv">$count</span><span class="s2">&quot;</span>
+</code></pre></div>
+
+<p>In this example:</p>
+<p>The until loop runs as long as count is not equal to 5.</p>
+<p>When count reaches 5, the loop stops, and the final value of count is printed.</p>
+<p>3: THE WHILE LOOP
++ The while loop in Bash scripting is a fundamental construct that allows you to execute a block of commands repeatedly as long as a specified condition evaluates to true. It is particularly useful when the number of iterations is not known beforehand and depends on the condition being checked[1], [2].</p>
+<div class="codehilite"><pre><span></span><code><span class="k">while</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>condition<span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span><span class="c1"># commands</span>
+<span class="k">done</span>
+</code></pre></div>
+
+<h1 id="example-of-while-loop">EXAMPLE OF WHILE LOOP<a class="headerlink" href="#example-of-while-loop" title="Permanent link">&para;</a></h1>
+<div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="nv">count</span><span class="o">=</span><span class="m">1</span>
+
+<span class="k">while</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$count</span><span class="w"> </span>-le<span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Count is </span><span class="nv">$count</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="o">((</span>count++<span class="o">))</span>
+<span class="k">done</span>
+</code></pre></div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../EXTENDEDTEST_CJN/" class="btn btn-neutral float-left" title="EXTENDED TEST"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../EXAMPLES_CJN/" class="btn btn-neutral float-right" title="EXAMPLES">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/Nkwenti-Severian-Ndongtsop/SHELL_SCRIPTING_LPIC--102-.git" class="fa fa-code-fork" style="color: #fcfcfc"> SHELL_SCRIPTING_LPIC--102-</a>
+        </span>
+    
+    
+      <span><a href="../EXTENDEDTEST_CJN/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../EXAMPLES_CJN/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

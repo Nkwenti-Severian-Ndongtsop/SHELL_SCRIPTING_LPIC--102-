@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://github.com/Nkwenti-Severian-Ndongtsop/SHELL_SCRIPTING_LPIC--102-.git/assignment/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>SHELL STRUCTURE - SHELL_SCRIPTING</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "SHELL STRUCTURE";
+        var mkdocs_page_input_path = "assignment.md";
+        var mkdocs_page_url = "/Nkwenti-Severian-Ndongtsop/SHELL_SCRIPTING_LPIC--102-.git/assignment/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> SHELL_SCRIPTING
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../shell_nk/">SHELL</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="../Aliases-and-funtion_nk.md">ALIASES</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../VARIABLE_nk/">VARIABLE</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">SHELL STRUCTURE</a>
+    <ul class="current">
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../EXTENDEDTEST_CJN/">EXTENDED TEST</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../LOOPCONTRUCTS_CJN/">LOOP CONTRUCT</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../EXAMPLES_CJN/">EXAMPLES</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">SHELL_SCRIPTING</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">SHELL STRUCTURE</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/Nkwenti-Severian-Ndongtsop/SHELL_SCRIPTING_LPIC--102-.git/edit/master/docs/chojuninengu/assignment.md">Edit on SHELL_SCRIPTING_LPIC--102-</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="script-structure-and-extensions">SCRIPT STRUCTURE AND EXTENSIONS<a class="headerlink" href="#script-structure-and-extensions" title="Permanent link">&para;</a></h1>
+<div class="codehilite"><pre><span></span><code><span class="nx">A</span><span class="w"> </span><span class="nx">Script</span><span class="w"> </span><span class="nx">file</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="nx">an</span><span class="w"> </span><span class="nx">ordered</span><span class="w"> </span><span class="nx">sequence</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">commands</span><span class="w"> </span><span class="nx">that</span><span class="w"> </span><span class="nx">must</span><span class="w"> </span><span class="nx">be</span><span class="w"> </span><span class="nx">executed</span><span class="w"> </span><span class="nx">by</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">corresponding</span><span class="w"> </span><span class="nx">command</span><span class="w"> </span><span class="nx">interpreter</span><span class="p">.</span>
+
+<span class="nx">There</span><span class="w"> </span><span class="nx">are</span><span class="w"> </span><span class="nx">many</span><span class="w"> </span><span class="nx">interpreters</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">Script</span><span class="w"> </span><span class="nx">but</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">one</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="nx">after</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="err">&#39;#</span><span class="p">!</span><span class="err">&#39;</span><span class="w"> </span><span class="nx">at</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">first</span><span class="w"> </span><span class="nx">line</span>
+<span class="nx">known</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nx">shebang</span><span class="w"> </span><span class="k">like</span><span class="w"> </span><span class="o">/</span><span class="nx">bin</span><span class="o">/</span><span class="nx">bash</span>
+
+<span class="nx">All</span><span class="w"> </span><span class="nx">lines</span><span class="w"> </span><span class="nx">with</span><span class="w"> </span><span class="s">&quot;#&quot;</span><span class="w"> </span><span class="nx">are</span><span class="w"> </span><span class="nx">considered</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nx">ignored</span>
+
+<span class="nx">To</span><span class="w"> </span><span class="nx">manipulate</span><span class="w"> </span><span class="nx">files</span><span class="p">,</span><span class="w"> </span><span class="nx">we</span><span class="w"> </span><span class="nx">must</span><span class="w"> </span><span class="nx">make</span><span class="w"> </span><span class="nx">sure</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">users</span><span class="w"> </span><span class="nx">groups</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="nx">others</span><span class="w"> </span><span class="nx">have</span><span class="w"> </span><span class="nx">proper</span><span class="w"> </span><span class="nx">permissions</span>
+<span class="nx">We</span><span class="w"> </span><span class="nx">use</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">command</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">chmod</span><span class="w"> </span><span class="nx">ugo</span><span class="w"> </span><span class="o">-=+</span><span class="w"> </span><span class="nx">rwx</span><span class="err">&#39;</span>
+
+<span class="nx">With</span><span class="w"> </span><span class="nx">permissions</span><span class="w"> </span><span class="nx">put</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">current</span><span class="w"> </span><span class="nx">directory</span><span class="p">,</span><span class="w"> </span><span class="nx">it</span><span class="w"> </span><span class="nx">can</span><span class="w"> </span><span class="nx">be</span><span class="w"> </span><span class="nx">executed</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="err">&#39;</span><span class="p">.</span><span class="o">/</span><span class="nx">scriptname</span><span class="p">.</span><span class="nx">sh</span><span class="err">&#39;</span>
+
+<span class="nx">It</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="nx">important</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">make</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">script</span><span class="w"> </span><span class="nx">writable</span><span class="w"> </span><span class="nx">by</span><span class="w"> </span><span class="nx">root</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="nx">only</span><span class="w"> </span><span class="nx">because</span><span class="w"> </span><span class="nx">groups</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="nx">others</span><span class="w"> </span><span class="nx">can</span><span class="w"> </span><span class="nx">destroy</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">script</span><span class="w"> </span>
+<span class="nx">by</span><span class="w"> </span><span class="nx">modifying</span><span class="w"> </span><span class="nx">it</span><span class="p">.</span>
+
+<span class="nx">The</span><span class="w"> </span><span class="nx">placement</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">file</span><span class="w"> </span><span class="nx">are</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="nx">too</span><span class="w"> </span><span class="nx">rigid</span><span class="p">.</span><span class="w"> </span><span class="nx">Two</span><span class="w"> </span><span class="nx">commands</span><span class="w"> </span><span class="nx">can</span><span class="w"> </span><span class="nx">be</span><span class="w"> </span><span class="nx">on</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">same</span><span class="w"> </span><span class="nx">line</span><span class="w"> </span><span class="nx">but</span><span class="w"> </span><span class="nx">executed</span><span class="w"> </span><span class="nx">differently</span><span class="p">.</span><span class="w"> </span>
+<span class="nx">This</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="nx">done</span><span class="w"> </span><span class="nx">by</span><span class="w"> </span><span class="nx">simply</span><span class="w"> </span><span class="nx">adding</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="sc">&#39;;&#39;</span><span class="w"> </span><span class="nx">at</span><span class="w"> </span><span class="nx">end</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">each</span><span class="w"> </span><span class="nx">command</span><span class="p">.</span>
+
+<span class="nx">We</span><span class="w"> </span><span class="nx">can</span><span class="w"> </span><span class="nx">check</span><span class="w"> </span><span class="nx">status</span><span class="w"> </span><span class="nx">by</span><span class="w"> </span><span class="nx">using</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="err">&#39;$</span><span class="p">?</span><span class="err">&#39;</span><span class="w"> </span><span class="nx">command</span><span class="p">.</span>
+</code></pre></div>
+
+<h1 id="variables">VARIABLES<a class="headerlink" href="#variables" title="Permanent link">&para;</a></h1>
+<div class="codehilite"><pre><span></span><code><span class="n">Storage</span><span class="w"> </span><span class="n">locations</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">holds</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="n">eg</span><span class="w"> </span><span class="n">Solution</span><span class="o">=</span><span class="mi">422</span>
+
+<span class="n">Variables</span><span class="w"> </span><span class="n">can</span><span class="s1">&#39;t start with a non-alphabetical variable.</span>
+
+<span class="n">Bash</span><span class="w"> </span><span class="n">script</span><span class="w"> </span><span class="n">also</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="n">special</span><span class="w"> </span><span class="n">variables</span><span class="w"> </span><span class="n">called</span><span class="w"> </span><span class="n">parameters</span><span class="o">.</span>
+
+<span class="n">Parameters</span><span class="w"> </span><span class="n">start</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">non</span><span class="o">-</span><span class="n">alphabetical</span><span class="w"> </span><span class="n">characters</span><span class="w"> </span><span class="n">like</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
+
+<ul>
+<li>
+<p>$* All arguments passed to the script</p>
+</li>
+<li>
+<p>$@ All arguments passed to the script if used with double quotes </p>
+</li>
+<li>
+<p>$# Numbers of arguments in the script </p>
+</li>
+<li>
+<p>$0 Name of script file</p>
+</li>
+<li>
+<p>$!  PID of last executed script</p>
+</li>
+<li>
+<p>$$ PID of current shell</p>
+</li>
+<li>
+<p>$? Status code of last executed command</p>
+<p>There is also what we call ;</p>
+</li>
+</ul>
+<p>### Positional parameters  : 
+    Positional parameters are variables that refer to specific positions in a list of arguments.</p>
+<div class="codehilite"><pre><span></span><code><span class="n">They</span><span class="w"> </span><span class="n">take</span><span class="w"> </span><span class="n">numbers</span><span class="w"> </span><span class="n">except</span><span class="w"> </span><span class="mf">0.</span><span class="w"> </span><span class="n">If</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">greater</span><span class="w"> </span><span class="n">than</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="n">use</span><span class="w"> </span><span class="n">curly</span><span class="w"> </span><span class="n">brackets</span><span class="w"> </span><span class="p">{}</span>
+
+<span class="n">For</span><span class="w"> </span><span class="n">example</span><span class="w"> </span><span class="o">$</span><span class="p">{</span><span class="mi">23</span><span class="p">}</span>
+
+<span class="n">Here</span><span class="w"> </span><span class="n">communication</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">interaction</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">user</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">very</span><span class="w"> </span><span class="n">crutial</span><span class="o">.</span>
+
+<span class="n">To</span><span class="w"> </span><span class="n">display</span><span class="w"> </span><span class="n">output</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">user</span><span class="p">,</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="n">use</span><span class="w"> </span><span class="s1">&#39;echo&#39;</span><span class="o">.</span><span class="w"> </span><span class="n">For</span><span class="w"> </span><span class="n">example</span><span class="w"> </span><span class="s1">&#39;echo hello&#39;</span>
+
+<span class="n">To</span><span class="w"> </span><span class="n">take</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">user</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">use</span><span class="w"> </span><span class="s1">&#39;read&#39;</span><span class="o">.</span><span class="w"> </span><span class="n">For</span><span class="w"> </span><span class="n">example</span><span class="w"> </span><span class="s1">&#39;read name&#39;</span><span class="w"> </span><span class="n">where</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">variable</span><span class="o">.</span>
+
+<span class="n">We</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">take</span><span class="w"> </span><span class="n">multiple</span><span class="w"> </span><span class="n">inputs</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">user</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="n">separatong</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">variables</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">space</span>
+<span class="n">For</span><span class="w"> </span><span class="n">example</span><span class="w"> </span><span class="n">read</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="n">sex</span>
+
+<span class="n">To</span><span class="w"> </span><span class="n">store</span><span class="w"> </span><span class="n">commands</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">variable</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="n">use</span><span class="w"> </span><span class="err">``</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="o">$</span><span class="p">()</span>
+
+<span class="n">To</span><span class="w"> </span><span class="n">know</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">variable</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="n">use</span><span class="w"> </span><span class="c1">#{} eg echo ${#OS}</span>
+</code></pre></div>
+
+<h1 id="arrays">ARRAYS<a class="headerlink" href="#arrays" title="Permanent link">&para;</a></h1>
+<div class="codehilite"><pre><span></span><code><span class="n">An</span><span class="w"> </span><span class="n">array</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">variable</span><span class="w"> </span><span class="n">storing</span><span class="w"> </span><span class="n">many</span><span class="w"> </span><span class="n">inputs</span><span class="o">.</span>
+<span class="n">It</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">declared</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="s1">&#39;declare -a&#39;</span><span class="w"> </span><span class="n">eg</span><span class="w"> </span><span class="n">declare</span><span class="w"> </span><span class="o">-</span><span class="n">a</span><span class="w"> </span><span class="n">size</span>
+
+<span class="n">To</span><span class="w"> </span><span class="n">insert</span><span class="w"> </span><span class="n">values</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">do</span><span class="w"> </span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="w"> </span><span class="n">This</span><span class="w"> </span><span class="n">directly</span><span class="w"> </span><span class="n">puts</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">values</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">index</span>
+
+<span class="n">We</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">still</span><span class="w"> </span><span class="n">do</span><span class="w"> </span><span class="n">size</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="mf">2.</span><span class="w"> </span><span class="n">This</span><span class="w"> </span><span class="n">puts</span><span class="w"> </span><span class="n">values</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="n">one</span>
+
+<span class="n">To</span><span class="w"> </span><span class="n">read</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">array</span><span class="p">,</span><span class="w"> </span><span class="n">just</span><span class="w"> </span><span class="n">write</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">variable</span><span class="w"> </span><span class="n">size</span>
+
+<span class="n">To</span><span class="w"> </span><span class="n">read</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">array</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="n">write</span><span class="w"> </span><span class="o">$</span><span class="p">{</span><span class="n">size</span><span class="p">[</span><span class="mi">1</span><span class="p">]}</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">example</span>
+</code></pre></div>
+
+<h1 id="arithmetic-expression">ARITHMETIC EXPRESSION<a class="headerlink" href="#arithmetic-expression" title="Permanent link">&para;</a></h1>
+<div class="codehilite"><pre><span></span><code><span class="n">To</span><span class="w"> </span><span class="n">perform</span><span class="w"> </span><span class="n">arithmetic</span><span class="w"> </span><span class="n">operations</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="n">use</span>
+
+<span class="err">```</span><span class="n">sum</span><span class="o">=</span><span class="err">`</span><span class="n">expr</span><span class="w"> </span><span class="o">$</span><span class="n">val1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="o">$</span><span class="n">val2</span><span class="err">`</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">sum</span><span class="o">=$</span><span class="p">((</span><span class="o">$</span><span class="n">val1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="o">$</span><span class="n">val2</span><span class="p">))</span><span class="err">```</span>
+
+<span class="n">where</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">variable</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">take</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">whole</span><span class="w"> </span><span class="n">calculation</span><span class="p">,</span><span class="w"> </span><span class="n">val1</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">val2</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">numbers</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">operator</span>
+</code></pre></div>
+
+<h1 id="conditional-expression">CONDITIONAL EXPRESSION<a class="headerlink" href="#conditional-expression" title="Permanent link">&para;</a></h1>
+<div class="codehilite"><pre><span></span><code><span class="nv">In</span><span class="w"> </span><span class="nv">bash</span>,<span class="w"> </span><span class="nv">not</span><span class="w"> </span><span class="nv">all</span><span class="w"> </span><span class="nv">commands</span><span class="w"> </span><span class="nv">are</span><span class="w"> </span><span class="nv">but</span><span class="w"> </span><span class="nv">only</span><span class="w"> </span><span class="nv">those</span><span class="w"> </span><span class="nv">that</span><span class="w"> </span><span class="nv">respect</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">particular</span><span class="w"> </span><span class="nv">criteria</span>.
+<span class="k">for</span><span class="w"> </span><span class="nv">example</span><span class="w"> </span><span class="nv">command</span><span class="w"> </span><span class="nv">A</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nv">command</span><span class="w"> </span><span class="nv">B</span><span class="w"> </span><span class="nv">here</span><span class="w"> </span><span class="nv">execution</span><span class="w"> </span><span class="nv">continues</span><span class="w"> </span><span class="nv">only</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">one</span><span class="w"> </span><span class="nv">at</span><span class="w"> </span><span class="nv">left</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="nv">correct</span>.<span class="w"> </span><span class="ss">(</span><span class="nv">status</span><span class="w"> </span><span class="nv">code</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="mi">0</span><span class="ss">)</span>
+<span class="k">If</span><span class="w"> </span><span class="nv">not</span><span class="w"> </span><span class="nv">it</span><span class="w"> </span><span class="nv">will</span><span class="w"> </span><span class="nv">display</span><span class="w"> </span><span class="nv">an</span><span class="w"> </span><span class="nv">error</span><span class="w"> </span><span class="nv">and</span><span class="w"> </span><span class="nv">stop</span>
+
+<span class="k">For</span><span class="w"> </span><span class="nv">command</span><span class="w"> </span><span class="nv">A</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nv">command</span><span class="w"> </span><span class="nv">B</span><span class="w"> </span><span class="nv">here</span><span class="w"> </span><span class="nv">execution</span><span class="w"> </span><span class="nv">will</span><span class="w"> </span><span class="nv">stop</span><span class="w"> </span><span class="nv">when</span><span class="w"> </span><span class="nv">it</span><span class="w"> </span><span class="nv">found</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">correct</span><span class="w"> </span><span class="nv">command</span><span class="w"> </span><span class="ss">(</span><span class="nv">status</span><span class="w"> </span><span class="nv">code</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="nv">not</span><span class="w"> </span><span class="mi">0</span><span class="ss">)</span>
+
+<span class="nv">There</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="nv">also</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nv">condition</span>.<span class="w"> </span><span class="nv">Compares</span><span class="w"> </span><span class="nv">condition</span><span class="w"> </span><span class="k">until</span><span class="w"> </span><span class="nv">one</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="nv">false</span>
+
+<span class="k">for</span><span class="w"> </span><span class="nv">example</span>
+</code></pre></div>
+
+<p>```sh
+    if [ condition ]; then </p>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nv">command</span>
+
+<span class="nv">fi</span>
+
+<span class="nv">We</span><span class="w"> </span><span class="nv">can</span><span class="w"> </span><span class="nv">also</span><span class="w"> </span><span class="nv">put</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="nv">and</span><span class="w"> </span><span class="nv">elif</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">compare</span><span class="w"> </span><span class="nv">many</span><span class="w"> </span><span class="nv">conditions</span>
+
+<span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">example</span><span class="w"> </span>
+<span class="k">if</span><span class="w"> </span>[<span class="w"> </span><span class="nv">condition</span><span class="w"> </span>]<span class="c1">; then</span>
+
+<span class="w">    </span><span class="nv">command</span>
+
+<span class="w">    </span><span class="nv">elif</span><span class="w"> </span>[<span class="w"> </span><span class="nv">condtion</span><span class="w"> </span>]<span class="c1">; then</span>
+
+<span class="w">        </span><span class="nv">command</span>
+
+<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="nv">command</span>
+
+<span class="nv">fi</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code># SCRIPT OUTPUT
+
+    Even when the purpose of a script only involves file-oriented operations, it is important to display
+    progress related messages in the standard output, so the user should be informed of progress work.
+    To display the output, te echo command is used
+
+    With option -e, command echo is able to display special
+    characters using escaped sequences
+```sh
+
+     #!/bin/bash
+    OS=$(uname -o)
+    echo -e &quot;Operating system:\t$OS&quot;
+</code></pre></div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../VARIABLE_nk/" class="btn btn-neutral float-left" title="VARIABLE"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../EXTENDEDTEST_CJN/" class="btn btn-neutral float-right" title="EXTENDED TEST">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/Nkwenti-Severian-Ndongtsop/SHELL_SCRIPTING_LPIC--102-.git" class="fa fa-code-fork" style="color: #fcfcfc"> SHELL_SCRIPTING_LPIC--102-</a>
+        </span>
+    
+    
+      <span><a href="../VARIABLE_nk/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../EXTENDEDTEST_CJN/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
