@@ -5,7 +5,7 @@
     There are many interpreters for the Script but the default one is after the '#!' at the first line
     known as shebang like /bin/bash
 
-    All lines with "#" are considered as ignored 
+    All lines with "#" are considered as ignored after the shebang and considered as comments.
 
     To manipulate files, we must make sure the users groups or others have proper permissions
     We use the command 'chmod ugo -=+ rwx'
@@ -86,7 +86,9 @@
 
     To perform arithmetic operations we use 
 
-    ```sum=`expr $val1 + $val2` or sum=$(($val1 + $val2))```
+```sh 
+    sum=`expr $val1 + $val2` or sum=$(($val1 + $val2))
+ ```
 
     where sum is the name of the variable that take the whole calculation, val1 and val2 are numbers and + is the operator
 
@@ -138,4 +140,6 @@
      #!/bin/bash
     OS=$(uname -o)
     echo -e "Operating system:\t$OS"
+    Operating system:	GNU/Linux
+
 ```
