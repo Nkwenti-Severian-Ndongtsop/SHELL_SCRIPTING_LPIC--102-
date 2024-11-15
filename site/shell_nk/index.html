@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://github.com/Nkwenti-Severian-Ndongtsop/SHELL_SCRIPTING_LPIC--102-.git/shell_nk/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>SHELL - SHELL_SCRIPTING</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "SHELL";
+        var mkdocs_page_input_path = "shell_nk.md";
+        var mkdocs_page_url = "/Nkwenti-Severian-Ndongtsop/SHELL_SCRIPTING_LPIC--102-.git/shell_nk/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> SHELL_SCRIPTING
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">SHELL</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#exmples-of-log-in-shells">exmples of log-in shells</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#examples-of-non-log-in-shells">examples of non log-in shells</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#examples-of-interactive-shells">examples of interactive shells</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#examples-of-non-interactive-shells">examples of non-interactive shells</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#this-ends-this-chapter">This ends this chapter</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="../Aliases-and-funtion_nk.md">ALIASES</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../VARIABLE_nk/">VARIABLE</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../assignment/">SHELL STRUCTURE</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../EXTENDEDTEST_CJN/">EXTENDED TEST</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../LOOPCONTRUCTS_CJN/">LOOP CONTRUCT</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../EXAMPLES_CJN/">EXAMPLES</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">SHELL_SCRIPTING</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">SHELL</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/Nkwenti-Severian-Ndongtsop/SHELL_SCRIPTING_LPIC--102-.git/edit/master/docs/chojuninengu/shell_nk.md">Edit on SHELL_SCRIPTING_LPIC--102-</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="shell_scripting_lpic">SHELL_SCRIPTING_LPIC<a class="headerlink" href="#shell_scripting_lpic" title="Permanent link">&para;</a></h1>
+<p>##     customizing and using the shell variables
+  ####        key points
+   - set environment variables
+   - write bash functions for frequently used commands 
+   - maintain skeleton directories for new users account
+   - set command search path with the proper directory</p>
+<p>The shell is the most powerful tool in a linux system and provides an interface for managing the linux operating.
+It takes input from the user as commands and gives output on the terminal.</p>
+<p>Starting with shells we have <strong>Interractive/Non-interactive shells</strong> and <strong>Login/Non-Login Shells</strong>\
+<strong>Log-in shells:</strong> is the initial shell that starts when a user logs in to the system, through the terminal or SSH connection.
+This log-in uses <strong>~/.profile</strong>, <strong>~/.bashrc</strong>, etc. This is indicated using <strong>(-)</strong>\
+<strong>Non log-in shells:</strong> these are shells that are started without a log-in process, like starting a shell from another shell or a program.\ 
+It executes the <strong>~/.bashrc</strong>. This does not have <strong>(-)</strong>. 
+The command to check wether you are on a log-in shell or a non log-in shell is</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="nv">$0</span>
+</code></pre></div>
+
+<p><strong>Interactive shells:</strong> these are shells that respond accordingly to commands inputted by the user.\
+<strong>Non-interactive shell:</strong> these shells does not allow the user to input commands and returns  no output to the user.
+e.g the screen command</p>
+<div class="codehilite"><pre><span></span><code>screen
+</code></pre></div>
+
+<h5 id="exmples-of-log-in-shells">exmples of log-in shells<a class="headerlink" href="#exmples-of-log-in-shells" title="Permanent link">&para;</a></h5>
+<ul>
+<li>log-in into another user</li>
+<li>log-in remotely using SSH</li>
+</ul>
+<h5 id="examples-of-non-log-in-shells">examples of non log-in shells<a class="headerlink" href="#examples-of-non-log-in-shells" title="Permanent link">&para;</a></h5>
+<ul>
+<li>vs-code shell</li>
+<li>normal shell</li>
+</ul>
+<h5 id="examples-of-interactive-shells">examples of interactive shells<a class="headerlink" href="#examples-of-interactive-shells" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Bash</li>
+<li>Zsh</li>
+</ul>
+<h5 id="examples-of-non-interactive-shells">examples of non-interactive shells<a class="headerlink" href="#examples-of-non-interactive-shells" title="Permanent link">&para;</a></h5>
+<ul>
+<li>running a command on remote server using SSH
+<code>echo 'echo $-; shopt login_shell'| ssh localhost</code></li>
+</ul>
+<p>The next thing are start-up scripts;\
+<strong>/etc/profile :</strong> this script runs to set-up all environment variables such as PS1.
+When log-in into a user the <code>.profile</code> and <code>/etc/profile</code> runs.\
+<strong>~/.bash_profile:</strong> it is used to configure the users environment.\
+it also runs both <code>~/.bash_login</code>, <code>~/.profile</code>.\
+<strong>~/.bash_login:</strong> it is used when you want to log-in.\
+<strong>~/.profile:</strong> this is a check file. the script in it checks if a shell is running, if so, it's run the <code>~/.bashrc</code>.\
+<strong>~/.bash_logout:</strong> this runs when you want to log-out. It ensures the clean-up of all operations. </p>
+<p>##### The next thing is how to execute a file\
+They are two alternatives;</p>
+<blockquote>
+<p>source \&lt;filename&gt;</p>
+<p>. \&lt;filename&gt;</p>
+</blockquote>
+<p>The last thing under this chapter is <code>SKEL</code>\
+This directory <code>/etc/skel</code> contains template directory which are created when a new user is added.
+You can display the content of this directory using </p>
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/etc/skel
+</code></pre></div>
+
+<h2 id="this-ends-this-chapter">This ends this chapter<a class="headerlink" href="#this-ends-this-chapter" title="Permanent link">&para;</a></h2>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href=".." class="btn btn-neutral float-left" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../VARIABLE_nk/" class="btn btn-neutral float-right" title="VARIABLE">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/Nkwenti-Severian-Ndongtsop/SHELL_SCRIPTING_LPIC--102-.git" class="fa fa-code-fork" style="color: #fcfcfc"> SHELL_SCRIPTING_LPIC--102-</a>
+        </span>
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../VARIABLE_nk/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://github.com/Nkwenti-Severian-Ndongtsop/SHELL_SCRIPTING_LPIC--102-.git/Aliases-and-function_nk/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Functions and Aliases - SHELL_SCRIPTING</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Functions and Aliases";
+        var mkdocs_page_input_path = "Aliases-and-function_nk.md";
+        var mkdocs_page_url = "/Nkwenti-Severian-Ndongtsop/SHELL_SCRIPTING_LPIC--102-.git/Aliases-and-function_nk/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> SHELL_SCRIPTING
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../shell_nk/">SHELL</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="../Aliases-and-funtion_nk.md">ALIASES</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../VARIABLE_nk/">VARIABLE</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../assignment/">SHELL STRUCTURE</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../EXTENDEDTEST_CJN/">EXTENDED TEST</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../LOOPCONTRUCTS_CJN/">LOOP CONTRUCT</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../EXAMPLES_CJN/">EXAMPLES</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">SHELL_SCRIPTING</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Functions and Aliases</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/Nkwenti-Severian-Ndongtsop/SHELL_SCRIPTING_LPIC--102-.git/edit/master/docs/chojuninengu/Aliases-and-function_nk.md">Edit on SHELL_SCRIPTING_LPIC--102-</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="functions-and-aliases">Functions and Aliases<a class="headerlink" href="#functions-and-aliases" title="Permanent link">&para;</a></h1>
+<h3 id="aliases">Aliases<a class="headerlink" href="#aliases" title="Permanent link">&para;</a></h3>
+<p>An alias ia a subtitute name for another command(s). It is very easy to create an alias.\
+to create an aliase we use the following formst;</p>
+<blockquote>
+<p>alias <alias_name>=command(s)</p>
+<p>unalias <aliase_name></p>
+</blockquote>
+<p>### Creating Functions
+ Function can simply be a collection of commands and logic statements.\
+ We can have two syntax in creating a function;
+Under function we have two ways of defining functions
+- using the keyword <code>function</code>\
+using this keyword you simply add the function_name next to it, then the commands in curly brackets <code>{}</code></p>
+<blockquote>
+<p>function <function_name> {</p>
+<p>command1</p>
+<p>command2</p>
+<p>command#</p>
+<p>}</p>
+</blockquote>
+<ul>
+<li>using <code>()</code>
+using this symbol<code>()</code>, you don't need the function keyword. You can just write the function name then you include<code>()</code> after the name.</li>
+</ul>
+<blockquote>
+<p><function_name>() {</p>
+<p>command1</p>
+<p>command2</p>
+<p>command#</p>
+<p>}</p>
+</blockquote>
+<h3 id="bash-built-in-special-variables">bash built-in special variables<a class="headerlink" href="#bash-built-in-special-variables" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>$?</code>: used to check if the last command was successfully executed.</li>
+<li><code>$$</code>:it provides the <strong>PID</strong> of the current shell.\</li>
+<li><code>$!</code>: it povide the PID of the last running background job.\</li>
+<li><code>$#</code>: it is used to access the number of arguments passed to a function.\</li>
+<li><code>$@,$*</code>: they hold all the arguments passed in function.\</li>
+<li><code>$_</code>: it holds the last parameter.</li>
+</ul>
+<h4 id="variables-in-functions">Variables in functions<a class="headerlink" href="#variables-in-functions" title="Permanent link">&para;</a></h4>
+<p>This is simply writing a shell script and including a variable in it.</p>
+<div class="codehilite"><pre><span></span><code>test<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="nv">name</span><span class="o">=</span><span class="s2">&quot;Mr MArco&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;The god of code is </span><span class="nv">$name</span><span class="s2"> &quot;</span>
+<span class="o">}</span>
+</code></pre></div>
+
+<h4 id="positional-paramaters-in-functions">positional paramaters in functions<a class="headerlink" href="#positional-paramaters-in-functions" title="Permanent link">&para;</a></h4>
+<p>This is just about passing parameters in your function directly.</p>
+<div class="codehilite"><pre><span></span><code><span class="k">function</span><span class="w"> </span><span class="nb">test</span><span class="w"> </span><span class="o">{</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">, you look good&quot;</span>
+<span class="o">}</span>
+
+<span class="nb">test</span><span class="w"> </span>Mr<span class="w"> </span>Marco
+</code></pre></div>
+
+<p>we could also have;</p>
+<div class="codehilite"><pre><span></span><code><span class="k">function</span><span class="w"> </span><span class="nb">test</span><span class="w"> </span><span class="o">{</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">, you look good&quot;</span>
+<span class="o">}</span>
+</code></pre></div>
+
+<p>with this one, you will include the parameter when executing the function.\
+Making this script to a shell script, we need to introduce the <code>She
+bang</code><strong>#!/bin/bash</strong>\
+This function just like an interpreter. This is used if you want the bash interpreter to run your script, instead of the default shell.</p>
+<h4 id="creating-a-function-with-an-alias">Creating a function with an alias<a class="headerlink" href="#creating-a-function-with-an-alias" title="Permanent link">&para;</a></h4>
+<p>It is possible assigning a functiion to an alias. Such that anytime you call this alias, the function runs.</p>
+<div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Enter the name of the file: &quot;</span>
+<span class="nb">read</span><span class="w"> </span>file
+<span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="nv">$file</span><span class="w"> </span><span class="o">==</span><span class="w"> </span>*.sh<span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span>touch<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$file</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;#!/bin/bash&#39;</span><span class="w"> </span>&gt;<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$file</span><span class="s2">&quot;</span>
+nano<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$file</span><span class="s2">&quot;</span>
+<span class="k">else</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;please try with .sh extension&quot;</span>
+<span class="k">fi</span>
+</code></pre></div>
+
+<p>This script creates a file with a <code>.sh</code> extension and includes the <code>shebang</code> for you automatically.
+you can visit this link to see more about the script <a href="https://github.com/Nkwenti-Severian-Ndongtsop/automative-script-to-create-a-file">Nkwenti-repository</a></p>
+<h4 id="function-in-a-function">Function in a function<a class="headerlink" href="#function-in-a-function" title="Permanent link">&para;</a></h4>
+<p>we can include a function in a function</p>
+<div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+display<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Welcome, Mr Francis.&quot;</span>
+<span class="o">}</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Are you the founder of Adorsys[y/n]&quot;</span>
+<span class="nb">read</span><span class="w"> </span>respond
+<span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$respond</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;y&quot;</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+display
+<span class="k">else</span>
+<span class="nb">echo</span><span class="w"> </span>Thank<span class="w"> </span>you!
+<span class="k">fi</span>
+</code></pre></div>
+
+<h1 id="this-is-the-end-of-this-chapter">This is the end of this chapter.<a class="headerlink" href="#this-is-the-end-of-this-chapter" title="Permanent link">&para;</a></h1>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/Nkwenti-Severian-Ndongtsop/SHELL_SCRIPTING_LPIC--102-.git" class="fa fa-code-fork" style="color: #fcfcfc"> SHELL_SCRIPTING_LPIC--102-</a>
+        </span>
+    
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
